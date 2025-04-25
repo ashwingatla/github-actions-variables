@@ -1,9 +1,10 @@
 name: Workflow Demo
 
 on: 
+  workflow_dispatch
   # push
-  schedule:
-    - cron: '20 21 * * *'
+  # schedule:
+  #   - cron: '20 21 * * *'
 
 env:
   ACCESS_ID: ${{ vars.ACCESS_ID }}
