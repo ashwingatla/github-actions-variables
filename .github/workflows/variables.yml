@@ -3,7 +3,7 @@ name: Workflow Demo
 on: 
   # push
   schedule:
-    - cron: '42 15 * * *'
+    - cron: '20 15 * * *'
 
 env:
   ACCESS_ID: ${{ vars.ACCESS_ID }}
@@ -11,6 +11,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      TZ: 'Asia/Kolkata'
 
     steps:
     - name: Echo ACCESS_ID
